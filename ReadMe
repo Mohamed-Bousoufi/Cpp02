@@ -1,0 +1,38 @@
+🅾🅿🅴🆁🅰🆃🅾🆁 🅾🆅🅴🆁🅻🅾🅰🅳🅸🅽🅶
+is a specific case of polymorphism,
+where different operators have different implementations depending on their arguments.
+
+░▒▓ ---------------------------- ░▒▓
+
+🆃🅷🅴 🅲🅰🅽🅾🅽🅸🅲🅰🅻 🅲🅻🅰🆂🆂 🅵🅾🆁🅼
+
+is a robust specification of a class that enables class instances to provide uniform behavior (analogous to standard data types) in areas such as initialization, assignment,
+argument passing, and usage in return values from functions.
+
+░▒▓ ____________________________________ ▓▒░
+
+🅳🅴🅵🅰🆄🅻🆃 🅲🅾🅽🆂🆃🆁🆄🅲🆃🅾🆁🆂
+
+Constructor is a special non-static member function of a class that is used to initialize objects of its class type.
+A default constructor is a constructor which can be called with no arguments.
+
+░▒▓ ---------------------------- ░▒▓
+
+🅲🅾🅿🆈 🅲🅾🅽🆂🆃🆁🆄🅲🆃🅾🆁🆂
+The copy constructor is called whenever an object is initialized  from another object of the same type.
+
+░▒▓ ---------------------------- ░▒▓
+
+🅲🅾🅿🆈 🅰🆂🆂🅸🅶🅽🅼🅴🅽🆃 🅾🅿🅴🆁🅰🆃🅾🆁
+
+The copy assignment operator is called whenever an object appears on the left side of an assignment expression.
+
+░▒▓ ---------------------------- ░▒▓
+
+🅳🅴🆂🆃🆁🆄🅲🆃🅾🆁
+
+A destructor is also a special member function like a constructor.
+Destructor destroys the class objects created by the constructor.
+It is automatically called when an object goes out of scope.
+
+

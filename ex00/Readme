@@ -1,0 +1,113 @@
+
+______________________________
+***Integer Representation*****
+``````````````````````````````
+
+. Unsigned Integers
+Unsigned integers can represent zero and positive integers, but not negative integers. The value of an unsigned integer is interpreted as "the magnitude of its underlying binary pattern".
+Example 1: Suppose that n=8 and the binary pattern is 1111 1111B, the value of this unsigned integer is 1×2^0 + 1x2^1+....+1×2^7 = 255D.
+
+. Signed Integers
+
+Signed integers can represent zero, positive integers, as well as negative integers. Three representation schemes are available for signed integers:
+
+
+_________________________________________________________________________________________________________________
+Sign-Magnitude representation : with value of 0 representing positive integer and 1 representing negative integer.
+
+Example 1: Suppose that n=8 and the binary representation is 0 100 0001B.
+   Sign bit is 0 ⇒ positive
+   Absolute value is 100 0001B = 65
+
+Example 2: Suppose that n=8 and the binary representation is 1 000 0001B.
+Sign bit is 1 ⇒ negative
+Absolute value is 000 0001B = 1D
+  by Adding sing become
+    -1
+There are two representations (0000 0000B and 1000 0000B) for the number zero,
+__________________________________________________________________________________________________________________
+1's Complement representation : 
+
+.for positive integers, the absolute value of the integer is equal to "the magnitude of the (n-1)-bit binary pattern".
+.for negative integers, the absolute value of the integer is equal to "the magnitude of the complement (inverse) of the (n-1)-bit binary pattern" (hence called 1's complement).
+
+Example 1: Suppose that n=8 and the binary representation 0 100 0001B.
+   Sign bit is 0 ⇒ positive
+   Absolute value is 100 0001B = 65D
+   the integer is +65D
+
+Example 2: Suppose that n=8 and the binary representation 1 000 0001B.
+   Sign bit is 1 ⇒ negative
+   Absolute value is the complement of 000 0001B, i.e., 111 1110B = 126D
+   the integer is -126D
+
+There are two representations (0000 0000B and 1111 1111B) for zero.
+__________________________________________________________________________________________________________________
+
+2's Complement representation : it's 1's Complement representation + 1.
+
+Example 3: Suppose that n=8 and the binary representation 0 000 0000B.
+   Sign bit is 0 ⇒ positive
+   Absolute value is 000 0000B = 0D
+   Hence, the integer is +0D
+
+Example 4: Suppose that n=8 and the binary representation 1 111 1111B.
+   Sign bit is 1 ⇒ negative
+   Absolute value is the complement of 111 1111B plus 1, i.e., 000 0000B + 1B = 1D
+   Hence, the integer is -1D
+__________________________________________________________________________________________________________________
+
+Computers use 2's Complement Representation for Signed Integers
+
+There is only one representation for the number zero in 2's complement, instead of two representations in sign-magnitude and 1's complement.
+
+Positive and negative integers can be treated together in addition and subtraction. Subtraction can be carried out using the "addition logic".
+
+_____________________________________
+***floating point Representation*****
+`````````````````````````````````````
+
+To store a floating-point number, 4-byte(32 bit) memory will be allocated in computer.
+
+1 bit for sign
+
+8 bit for exponent part
+
+23 bit for significant part
+
+then Floating number will be converted to binary number the converted binary number to normalize form
+
+Normalize form : 1.significant bit * 2 exponent
+
+example :
+
+1010.11 will be normalized as
+
+1.01011 * 2^3. Since I have shifted 3 bits to left side.
+
+then we Add bias to exponent :
+
+In floating number, no concept called 2’s complement to store negative numbers. To overcame that, they came up with bias concept where we add some positive value to negative exponent and make it positive.
+
+In general, whether it negative or positive they add bias value to exponent value to reduce implementation complexity.
+
+Formula to calculate bias value is
+
+biasn = 2^n-1 - 1;
+
+we have allocated 8 bits for exponent. So n will be 8
+
+So, 2^7 - 1 = 127
+
+Example Representation for 10.75
+
+Now we have,
+
+Sign bit 0 because 10.75 is positive number
+
+Exponent value is 130 which is (10000010) 2 : 3 + 127
+
+Significant value is 1.01011, here we can eliminate 1 before the dot (.) because whatever be the number we always going to normalize as 1.something. So, no need to store the 1. Just take bits after the dot (.) which is 01011.
+
+
+
