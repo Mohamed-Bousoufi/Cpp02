@@ -1,0 +1,9 @@
+🆂🆃🅰🆃🅸🅲 🅼🅴🅼🅱🅴🆁 🅵🆄🅽🅲🆃🅸🅾🅽
+
+A static member function is independent of any object of the class.
+
+A static member function can be called 
+even if no objects of the class exist.
+
+A static member function can also be accessed using 
+the class name through the scope resolution operator.

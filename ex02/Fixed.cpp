@@ -35,7 +35,7 @@ Fixed :: Fixed(const float val)
 
 Fixed :: ~Fixed()
 {
-     std :: cout << "Destructor called" << std :: endl;
+    std :: cout << "Destructor called" << std :: endl;
 }
 
 int Fixed :: getRawBits(void) const
@@ -50,7 +50,7 @@ void Fixed :: operator=( const Fixed &src)
     this->value = src.getRawBits();
 }
 
-bool Fixed :: operator> (const Fixed & src)
+bool  Fixed :: operator> (const Fixed & src)
 {
     if(this->value > src.value)
     {
@@ -109,6 +109,85 @@ bool Fixed :: operator != (const Fixed & src)
     else
         return false;
 }
+
+Fixed Fixed :: operator + (const Fixed &src)
+{
+
+   return Fixed(this->toFloat() + src.toFloat());
+}
+
+Fixed Fixed :: operator - (const Fixed &src)
+{
+   return Fixed(this->toFloat() - src.toFloat());
+}
+
+Fixed Fixed :: operator * (const Fixed &src)
+{
+   return Fixed(this->toFloat() * src.toFloat());
+}
+
+Fixed Fixed :: operator / (const Fixed &src)
+{
+    if(src.value != 0)
+        return Fixed(this->toFloat() / src.toFloat());
+    else
+    {
+        std :: cout << "division by 0 it is Unacceptable" << std :: endl;
+        return(0);
+    }
+}
+
+//  post-increment
+Fixed Fixed :: operator++(int)
+{
+    Fixed comp(*this);
+    this->value++;
+    return(comp);
+}
+
+// (pre-increment)
+Fixed Fixed :: operator++()
+{
+    this->value++;
+
+    return(*this);
+}
+
+Fixed& Fixed :: min(Fixed &a,Fixed &b)
+{
+    if(a <= b)
+        return(a);
+    else
+        return(b);
+}
+
+const Fixed &Fixed :: min(const Fixed &a, const Fixed &b)
+{
+    if(a.getRawBits() <= b.getRawBits())
+        return(a);
+    else
+        return(b);
+}
+
+Fixed& Fixed :: max(Fixed &a,Fixed &b)
+{
+    if(a >= b)
+        return(a);
+    else
+        return(b);
+}
+
+const Fixed &Fixed :: max(const Fixed &a, const Fixed &b)
+{
+    if(a.getRawBits() >= b.getRawBits())
+        return(a);
+    else
+        return(b);
+}
+
+
+
+
 float Fixed :: toFloat( void ) const
 {
     float res;

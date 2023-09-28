@@ -109,5 +109,7 @@ Exponent value is 130 which is (10000010) 2 : 3 + 127
 
 Significant value is 1.01011, here we can eliminate 1 before the dot (.) because whatever be the number we always going to normalize as 1.something. So, no need to store the 1. Just take bits after the dot (.) which is 01011.
 
+🅵🅸🆇🅴🅳 🅿🅾🅸🅽🆃
 
+Fixed point is a simple yet very powerful way to represent fractional numbers in computer. By reusing all integer arithmetic circuits of a computer, fixed point arithmetic is orders of magnitude faster than floating point arithmetic. This is the reason why it is being used in many game and DSP applications. On the other hand, it lacks the range and precision that floating point number representation offers. You, as a programmer or circuit designer, must do the tradeoff.
 

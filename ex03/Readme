@@ -1,0 +1,16 @@
+🆃🅷🅴 🅰🆁🅴🅰 🅾🅵 🅰 🆃🆁🅸🅰🅽🅶🅻🅴
+
+The area of a triangle in determinant form
+is the formula used to find the area of the triangle
+when the coordinates of the vertices of the triangle are given.
+Suppose we have to find the area of triangle 
+ABC with vertices A(x1, y1), B(x2, y2), and C(x3, y3),
+then its area is calculated using the formula,
+
+Area = (1/2) [x1 (y2 – y3) + x2 (y3 – y1) + x3 (y1 – y2)]
+
+
+🅳🅴🆃🅴🆁🅼🅸🅽🅰🅽🆃 🅾🅵 🅰 🅼🅰🆃🆁🅸🆇 🆁🅴🅿🆁🅴🆂🅴🅽🆃
+
+The determinant of a matrix represents the volume of parallelopiped
+formed by the vectors using each column of the given matrix.

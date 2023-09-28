@@ -35,4 +35,13 @@ A destructor is also a special member function like a constructor.
 Destructor destroys the class objects created by the constructor.
 It is automatically called when an object goes out of scope.
 
+🅵🆄🅽🅲🆃🅸🅾🅽 🅾🆅🅴🆁🅻🅾🅰🅳🅸🅽🅶
 
+Ad-hoc Polymorphism, also called as Overloading Ad-hoc Polymorphism 
+allows functions having same name to act differently for different types.
+
+🅿🅾🅻🆈🅼🅾🆁🅿🅷🅸🆂🅼
+
+is a popular concept in object-oriented programming
+referring to the idea that an entity in code such as a variable,
+function or object can have more than one form

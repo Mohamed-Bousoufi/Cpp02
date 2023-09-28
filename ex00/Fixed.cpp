@@ -8,8 +8,8 @@ Fixed :: Fixed()
 
 Fixed :: Fixed(Fixed &copy)
 {
-    this->value = copy.value;
     std :: cout << "copy constructor called" << std :: endl;
+    *this = copy;
 }
 Fixed :: ~Fixed()
 {
